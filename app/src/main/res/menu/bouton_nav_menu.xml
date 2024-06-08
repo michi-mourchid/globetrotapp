@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Accueil"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/accueil"/>
+    <item android:title="Liste Pays"
+        android:icon="@drawable/outline_lists_24"
+        android:id="@+id/liste"/>
+    <item android:title="Ajouter Pays"
+        android:icon="@drawable/baseline_add_box_24"
+        android:id="@+id/ajout"/>
+    <item android:title="Favoris"
+        android:icon="@drawable/baseline_favorite_24"
+        android:id="@+id/favoris"/>
+</menu>
