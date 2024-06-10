@@ -67,7 +67,7 @@ class DetailActivity : AppCompatActivity() {
         retour = findViewById(R.id.image_retour)
         retour.setOnClickListener{
             val intent = Intent(this.applicationContext,PaysFragment::class.java)
-            startActivity(intent)
+            applicationContext.startActivity(intent)
         }
 
 

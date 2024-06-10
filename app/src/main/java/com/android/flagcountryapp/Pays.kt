@@ -1,9 +1,12 @@
 package com.android.flagcountryapp
 import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "pays")
 data class Pays(
-    @SerializedName("name") val name: String,
+    @PrimaryKey @SerializedName("name") val name: String,
     @SerializedName("official_name") val officialName: String,
     @SerializedName("topLevelDomain") val topLevelDomain: JsonElement,
     @SerializedName("alpha2Code") val alpha2Code: String,
