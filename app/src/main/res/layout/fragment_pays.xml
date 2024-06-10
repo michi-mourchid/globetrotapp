@@ -38,7 +38,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"></View>
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/image_retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -58,7 +58,9 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/barre_retour"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:listitem="@layout/item_pays"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

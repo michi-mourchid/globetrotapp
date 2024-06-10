@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_pays"
-        android:layout_width="401dp"
-        android:layout_height="54dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +38,25 @@
             android:id="@+id/tvCountryIso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:text="country_iso2"
             android:textSize="14sp"
-            tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="18dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_afficher_drapeau"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
             android:backgroundTint="@android:color/transparent"
             android:text="Afficher Drapeau"
             android:textColor="@color/black"
             android:textColorLink="@color/white"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@+id/tvCountryName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tvCountryName"
             app:layout_constraintTop_toTopOf="@+id/tvCountryName" />
 
         <!-- Ajoutez d'autres TextViews ou éléments si nécessaire -->

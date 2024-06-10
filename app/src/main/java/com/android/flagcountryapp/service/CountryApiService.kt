@@ -10,6 +10,7 @@ interface CountryApiService {
     @GET("name/{nom_pays}?apikey=AjUxVCug9IgZZglt0tGgOx2BdA7Nx8BHjDZKkx3O")
     fun getPays(@Path("nom_pays") nom_pays: String): Call<Pays>
 
+
     @GET("all?apikey=AjUxVCug9IgZZglt0tGgOx2BdA7Nx8BHjDZKkx3O")
-    fun getAllPays(): Call<List<Pays>>
+    fun getAllPays(): Call<Map<String,Pays>>
 }

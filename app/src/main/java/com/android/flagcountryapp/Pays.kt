@@ -1,32 +1,33 @@
 package com.android.flagcountryapp
+import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
 
 data class Pays(
     @SerializedName("name") val name: String,
     @SerializedName("official_name") val officialName: String,
-    @SerializedName("topLevelDomain") val topLevelDomain: List<String>,
+    @SerializedName("topLevelDomain") val topLevelDomain: JsonElement,
     @SerializedName("alpha2Code") val alpha2Code: String,
     @SerializedName("alpha3Code") val alpha3Code: String,
     @SerializedName("cioc") val cioc: String,
     @SerializedName("numericCode") val numericCode: String,
     @SerializedName("callingCode") val callingCode: String,
     @SerializedName("capital") val capital: String,
-    @SerializedName("altSpellings") val altSpellings: List<String>,
+    @SerializedName("altSpellings") val altSpellings: JsonElement,
     @SerializedName("region") val region: String,
     @SerializedName("subregion") val subregion: String,
     @SerializedName("population") val population: Int,
-    @SerializedName("latLng") val latLng: LatLng,
-    @SerializedName("demonyms") val demonyms: Demonyms,
-    @SerializedName("area") val area: Int,
-    @SerializedName("gini") val gini: Gini,
+    @SerializedName("latLng") val latLng: JsonElement,
+    @SerializedName("demonyms") val demonyms: JsonElement,
+    @SerializedName("area") val area: Float,
+    @SerializedName("gini") val gini: JsonElement,
     @SerializedName("timezones") val timezones: List<String>,
-    @SerializedName("borders") val borders: List<String>,
-    @SerializedName("nativeNames") val nativeNames: NativeNames,
-    @SerializedName("currencies") val currencies: Currencies,
-    @SerializedName("languages") val languages: Map<String, String>,
-    @SerializedName("translations") val translations: Map<String, String>,
+    @SerializedName("borders") val borders: JsonElement,
+    @SerializedName("nativeNames") val nativeNames: JsonElement,
+    @SerializedName("currencies") val currencies: JsonElement,
+    @SerializedName("languages") val languages: JsonElement,
+    @SerializedName("translations") val translations: JsonElement,
     @SerializedName("flag") val flag: Flag,
-    @SerializedName("regionalBlocs") val regionalBlocs: List<RegionalBloc>
+    @SerializedName("regionalBlocs") val regionalBlocs: JsonElement
 )
 
 data class LatLng(
