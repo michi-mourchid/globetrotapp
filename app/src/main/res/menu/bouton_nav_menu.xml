@@ -7,9 +7,9 @@
     <item android:title="Liste Pays"
         android:icon="@drawable/outline_lists_24"
         android:id="@+id/liste"/>
-    <item android:title="Ajouter Pays"
-        android:icon="@drawable/baseline_add_box_24"
-        android:id="@+id/ajout"/>
+    <item android:title="Quiz"
+        android:icon="@drawable/baseline_quiz_24"
+        android:id="@+id/quiz"/>
     <item android:title="Favoris"
         android:icon="@drawable/baseline_favorite_24"
         android:id="@+id/favoris"/>

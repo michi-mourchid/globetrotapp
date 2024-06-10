@@ -6,13 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.ListFragment
 import com.android.flagcountryapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-//AjUxVCug9IgZZglt0tGgOx2BdA7Nx8BHjDZKkx3O
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,14 +23,14 @@ class MainActivity : AppCompatActivity() {
         }
         replaceFragment(AccueilFragment())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {item ->
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.accueil -> {
                     replaceFragment(AccueilFragment())
                     true
                 }
-                R.id.ajout -> {
-                    replaceFragment(AjoutFragment())
+                R.id.quiz -> {
+                    replaceFragment(QuizFragment())
                     true
                 }
                 R.id.liste -> {
@@ -43,13 +41,10 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(FavorisFragment())
                     true
                 }
-
                 else -> {
                     true
                 }
             }
-
-
         }
     }
 
