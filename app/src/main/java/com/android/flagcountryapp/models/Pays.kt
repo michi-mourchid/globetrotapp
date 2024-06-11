@@ -1,4 +1,4 @@
-package com.android.flagcountryapp
+package com.android.flagcountryapp.models
 import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
 import androidx.room.Entity

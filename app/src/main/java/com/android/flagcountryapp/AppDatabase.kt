@@ -1,13 +1,17 @@
 package com.android.flagcountryapp.database
 
-import android.content.Context
+/*import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.android.flagcountryapp.Pays
+import androidx.room.TypeConverters
+import com.android.flagcountryapp.Converters
+import com.android.flagcountryapp.models.Pays
 import com.android.flagcountryapp.dao.CountryDao
 
-@Database(entities = [Pays::class], version = 1)
+@Database(entities = [Pays::class], version = 1, exportSchema = false)
+
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun countryDao(): CountryDao
 
@@ -22,4 +26,4 @@ abstract class AppDatabase : RoomDatabase() {
                 ).build().also { instance = it }
             }
     }
-}
+}*/

@@ -66,16 +66,9 @@ class DetailActivity : AppCompatActivity() {
 
         retour = findViewById(R.id.image_retour)
         retour.setOnClickListener{
-            val intent = Intent(this.applicationContext,PaysFragment::class.java)
-            applicationContext.startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
         }
 
-
-    }
-    fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.frame_layout, fragment).addToBackStack(null)
-            .commit()
 
     }
 }

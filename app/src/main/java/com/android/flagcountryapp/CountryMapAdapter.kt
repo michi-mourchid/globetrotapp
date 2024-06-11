@@ -1,5 +1,6 @@
 package com.android.flagcountryapp
 
+import com.android.flagcountryapp.models.Pays
 import com.google.gson.*
 import com.google.gson.JsonElement
 import java.lang.reflect.Type
