@@ -17,8 +17,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.util.Log
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.core.widget.doAfterTextChanged
 import com.android.flagcountryapp.models.Pays
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,6 +35,7 @@ private const val ARG_PARAM2 = "param2"
 class PaysFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var editText: EditText
+    private lateinit var retour: ImageView
     private lateinit var requestQueue: RequestQueue
     private lateinit var view: View
     private lateinit var binding: FragmentPaysBinding
@@ -82,6 +85,13 @@ class PaysFragment : Fragment() {
         editText = view.findViewById(R.id.input_recherche)
         extracted()
 
+        retour = view.findViewById(R.id.image_retour)
+        retour.setOnClickListener{
+            /*var bottomNavigationView : BottomNavigationView = view.findViewById(R.id.bottomNavigationView)
+            bottomNavigationView.selectedItemId = R.id.accueil*/
+            this.activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.frame_layout, AccueilFragment())?.commit()
+        }
+
 
     }
 
@@ -122,6 +132,15 @@ class PaysFragment : Fragment() {
         }
         fun updateCountries(countries : List<Pays>){
             this.countries= countries.toMutableList()
+        }
+
+        fun find(nom_pays : String) : Pays? {
+            for (country in countries){
+                if (country.name.equals(nom_pays)){
+                    return country
+                }
+            }
+            return null
         }
 
 

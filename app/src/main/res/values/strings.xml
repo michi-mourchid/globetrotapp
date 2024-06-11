@@ -44,4 +44,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="enter_country_name">"Devine le nom du pays "</string>
+    <string name="submit">Confirmer</string>
+    <string name="result">Résultat</string>
+    <string name="back_button">Retour</string>
 </resources>

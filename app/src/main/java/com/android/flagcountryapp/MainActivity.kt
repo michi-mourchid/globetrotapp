@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(AccueilFragment())
                     true
                 }
-                R.id.ajout -> {
-                    replaceFragment(AjoutFragment())
+                R.id.quizz -> {
+                    replaceFragment(QuizFragment())
                     true
                 }
                 R.id.liste -> {
@@ -56,4 +56,6 @@ class MainActivity : AppCompatActivity() {
     fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit()
     }
+
+
 }

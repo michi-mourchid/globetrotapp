@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,6 +42,7 @@ class FavorisFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var recyclerView: RecyclerView
     //private lateinit var database: AppDatabase
+    private lateinit var retour : ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,6 +64,13 @@ class FavorisFragment : Fragment() {
         val favCountries = favCountriesArray
         val adapter = FavoriteCountryAdapter(requireContext(),favCountries)
         recyclerView.adapter = adapter
+
+        retour = view.findViewById(R.id.image_retour)
+        retour.setOnClickListener{
+            /*var bottomNavigationView : BottomNavigationView = view.findViewById(R.id.bottomNavigationView)
+            bottomNavigationView.selectedItemId = R.id.accueil*/
+            this.activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.frame_layout, PaysFragment())?.commit()
+        }
     }
 
 

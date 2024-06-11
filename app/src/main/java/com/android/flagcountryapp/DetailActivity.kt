@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.android.flagcountryapp.models.Favoris
+import com.android.flagcountryapp.models.Pays
 import com.bumptech.glide.Glide
 
 class DetailActivity : AppCompatActivity() {
@@ -63,6 +65,24 @@ class DetailActivity : AppCompatActivity() {
         var populationView: TextView = findViewById(R.id.population)
         var population: Int = bundle.getInt("population")
         populationView.text = population.toString()
+
+        var ajouterFavoris : Button = findViewById(R.id.button_ajout_favoris)
+        var pays_retourne : Pays? = Favoris.find(nom_pays.toString())
+        var est_favoris : Boolean = false
+        if (pays_retourne!=null){
+            ajouterFavoris.setText("Enlever des favoris")
+            est_favoris = true
+        }
+        ajouterFavoris.setOnClickListener {
+            if (est_favoris){
+                Favoris.remove(pays_retourne!!)
+                ajouterFavoris.setText("Ajouter aux favoris")
+            } else {
+                var pays :Pays = PaysFragment.find(nom_pays.toString())!!
+                Favoris.add(pays)
+                ajouterFavoris.setText("Enlever des favoris")
+            }
+        }
 
         retour = findViewById(R.id.image_retour)
         retour.setOnClickListener{
